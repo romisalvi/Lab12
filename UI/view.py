@@ -34,7 +34,10 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
         #ROW with some controls
-        self.ddyear = ft.Dropdown(label="Anno")
+        self.ddyear = ft.Dropdown(label="Anno", options=[ft.dropdown.Option("2015"),
+                                                         ft.dropdown.Option("2016"),
+                                                         ft.dropdown.Option("2017"),
+                                                         ft.dropdown.Option("2018")] )
         self.ddcountry= ft.Dropdown(label="Nazione")
 
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handle_graph)
